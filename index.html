@@ -4,14 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sonic FanSite</title>
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./src/assets/css/main.css" />
   </head>
   <body>
     <main>
       <div class="container">
-        <div class="hero">
-          <img src="./assets/images/sonic-team.jpg" alt="sonic team" />
+        <div class="slider">
+          <div class="swiper-container gallery-top">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/images/sonic-team.jpg"
+                  alt="sonic team"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/images/sonic-team-2.jpg"
+                  alt="sonic team"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/images/sonic-team-3.jpg"
+                  alt="sonic team"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/images/sonic-team-4.jpg"
+                  alt="sonic team"
+                />
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-blue"></div>
+            <div class="swiper-button-prev swiper-button-blue"></div>
+          </div>
+          <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/images/sonic-team.jpg"
+                  alt="sonic team"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/images/sonic-team-2.jpg"
+                  alt="sonic team"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/images/sonic-team-3.jpg"
+                  alt="sonic team"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./src/assets/images/sonic-team-4.jpg"
+                  alt="sonic team"
+                />
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- <div class="hero">
+          <img src="./src/assets/images/sonic-team.jpg" alt="sonic team" />
+        </div> -->
         <div class="tab-wrapper">
           <div class="grid">
             <div class="grid-col">
@@ -40,7 +105,7 @@
                 <div class="tab__body">
                   <div class="tab__content active" id="sonic">
                     <figure>
-                      <img src="./assets/images/sonic.jpg" alt="Sonic" />
+                      <img src="./src/assets/images/sonic.jpg" alt="Sonic" />
                     </figure>
                     <div>
                       <p>
@@ -57,33 +122,11 @@
                         Architecto quia aliquid aperiam aspernatur delectus. At
                         totam explicabo assumenda vitae ipsum ullam?
                       </p>
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Perspiciatis est odit provident. Obcaecati
-                        reprehenderit alias sunt nisi laudantium veniam eum esse
-                        voluptate quaerat minus! A illum hic eos dignissimos in
-                        provident suscipit voluptate eum voluptatibus
-                        architecto, aliquam unde nisi eveniet laudantium
-                        deserunt! Natus in ad fuga accusamus. Architecto quia
-                        aliquid aperiam aspernatur delectus. At totam explicabo
-                        assumenda vitae ipsum ullam?
-                      </p>
-                      <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Perspiciatis est odit provident. Obcaecati
-                        reprehenderit alias sunt nisi laudantium veniam eum esse
-                        voluptate quaerat minus! A illum hic eos dignissimos in
-                        provident suscipit voluptate eum voluptatibus
-                        architecto, aliquam unde nisi eveniet laudantium
-                        deserunt! Natus in ad fuga accusamus. Architecto quia
-                        aliquid aperiam aspernatur delectus. At totam explicabo
-                        assumenda vitae ipsum ullam?
-                      </p>
                     </div>
                   </div>
                   <div class="tab__content" id="tails">
                     <figure>
-                      <img src="./assets/images/tails.jpg" alt="tails" />
+                      <img src="./src/assets/images/tails.jpg" alt="tails" />
                     </figure>
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -102,7 +145,10 @@
                   </div>
                   <div class="tab__content" id="knuckles">
                     <figure>
-                      <img src="./assets/images/knuckles.jpg" alt="Knuckles" />
+                      <img
+                        src="./src/assets/images/knuckles.jpg"
+                        alt="Knuckles"
+                      />
                     </figure>
                     <p>
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -150,6 +196,7 @@
       </svg>
     </main>
 
-    <script src="./assets/js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./src/assets/js/main.js"></script>
   </body>
 </html>

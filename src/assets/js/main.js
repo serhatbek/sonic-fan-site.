@@ -1,3 +1,5 @@
+// *********** TAB JS ********************
+
 const tabBtns = document.querySelectorAll('.tab__header__item');
 const tabPanels = document.querySelectorAll('.tab__content');
 
@@ -26,3 +28,26 @@ function showTabPanel(e) {
 
   target.classList.add('active');
 }
+
+//***************** Slider JS **********************
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+var galleryTop = new Swiper('.gallery-top', {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: galleryThumbs,
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});
