@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  background-color: #ffe602;
+}
+
+main {
+  position: relative;
+}
+
+main .svg-top {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  transform: rotate(180deg);
+}
+
+main .svg-bottom {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+.container {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.container .grid {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  grid-gap: 1rem;
+}
+
+.container .hero {
+  border: 4px solid #1f8bc2;
+  margin: auto 0;
+  box-shadow: 0 16px 24px 4px rgba(0, 0, 0, 0.7);
+}
+
+.container .hero img {
+  width: 100%;
+}
+
+.tab-wrapper {
+  padding-bottom: 100px;
+}
+
+.tab-wrapper .tab__header {
+  background-color: #ffe602;
+  border: 4px solid #1f8bc2;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  text-align: center;
+  box-shadow: 0 16px 24px 4px rgba(0, 0, 0, 0.7);
+}
+
+.tab-wrapper .tab__header__item {
+  width: 35%;
+  padding: 10px 0;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 600ms;
+  color: black;
+}
+
+.tab-wrapper .tab__header__item:hover.tab-sonic, .tab-wrapper .tab__header__item.tab-sonic.active {
+  background-color: #156fb4;
+  color: #fff;
+  letter-spacing: 6px;
+}
+
+.tab-wrapper .tab__header__item:hover.tab-tails, .tab-wrapper .tab__header__item.tab-tails.active {
+  background-color: #cb9510;
+  color: #fff;
+  letter-spacing: 6px;
+}
+
+.tab-wrapper .tab__header__item:hover.tab-knuckles, .tab-wrapper .tab__header__item.tab-knuckles.active {
+  background-color: #ff3700;
+  color: #fff;
+  letter-spacing: 6px;
+}
+
+.tab-wrapper .tab__body {
+  display: block;
+  border: 4px solid #1f8bc2;
+  background-color: #faae21;
+  box-shadow: 0 16px 24px 4px rgba(0, 0, 0, 0.7);
+}
+
+.tab-wrapper .tab__content {
+  display: none;
+}
+
+.tab-wrapper .tab__content.active {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.tab-wrapper .tab__content img {
+  border: 2px solid #1f8bc2;
+}
+
+.tab-wrapper .tab__content p {
+  padding: 16px;
+}
