@@ -51,3 +51,25 @@ var galleryTop = new Swiper('.gallery-top', {
     disableOnInteraction: false,
   },
 });
+
+//*************** ACCORDION  *******************
+
+const accordionItem = document.querySelectorAll('.accordion__item');
+accordionItem.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    accordionVisible(e);
+  });
+});
+
+function accordionVisible(e) {
+  let target = e.currentTarget;
+
+  if (!target.classList.contains('active')) {
+    accordionItem.forEach((item) => {
+      item.classList.remove('active');
+    });
+    target.classList.add('active');
+  } else {
+    target.classList.remove('active');
+  }
+}
