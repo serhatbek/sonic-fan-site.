@@ -1,0 +1,11 @@
+.main-footer {
+  border: 4px solid $colorBorder;
+  box-shadow: 0 16px 24px 4px rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  background-color: $colorInfo;
+
+  &__copyright {
+    text-align: center;
+    color: #fff;
+  }
+}

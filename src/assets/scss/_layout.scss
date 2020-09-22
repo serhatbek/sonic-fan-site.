@@ -65,7 +65,7 @@ main {
         display: inline-block;
         font-weight: 700;
         text-transform: uppercase;
-        transition: all 600ms;
+        transition: all 600ms ease-out;
         color: black;
 
         &:first-child {

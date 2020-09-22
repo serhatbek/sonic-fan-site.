@@ -81,7 +81,7 @@ main .modal.is-open {
   display: inline-block;
   font-weight: 700;
   text-transform: uppercase;
-  transition: all 600ms;
+  transition: all 600ms ease-out;
   color: black;
 }
 
@@ -177,6 +177,7 @@ header .container .main-nav__list {
 header .container .main-nav__list-item {
   list-style-type: none;
   position: relative;
+  transition: all 0.5s ease-out;
 }
 
 header .container .main-nav__list-item:hover {
@@ -427,6 +428,12 @@ header .container .button-wrapper .btn__login {
   color: #fff;
   font-family: inherit;
   transform: scaleX(1.8);
+  transition: color 0.3s ease-out;
+}
+
+.form-modal-wrapper.active .close-signIn:hover,
+.form-modal-wrapper.active .close-logIn:hover {
+  color: #ff3700;
 }
 
 .form-modal-wrapper.active .form-box {
@@ -519,4 +526,16 @@ textarea.parsley-error {
 
 .parsley-errors-list.filled {
   opacity: 1;
+}
+
+.main-footer {
+  border: 4px solid #1f8bc2;
+  box-shadow: 0 16px 24px 4px rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  background-color: #faae21;
+}
+
+.main-footer__copyright {
+  text-align: center;
+  color: #fff;
 }

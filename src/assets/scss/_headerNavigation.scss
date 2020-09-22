@@ -30,6 +30,7 @@ header {
       &__list-item {
         list-style-type: none;
         position: relative;
+        transition: all 0.5s ease-out;
 
         &:hover {
           background-color: $colorKnuckles;

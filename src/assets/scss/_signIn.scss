@@ -21,6 +21,11 @@
       color: #fff;
       font-family: inherit;
       transform: scaleX(1.8);
+      transition: color 0.3s ease-out;
+
+      &:hover {
+        color: $colorKnuckles;
+      }
     }
 
     .form-box {
