@@ -13,6 +13,14 @@ main {
     z-index: -1;
     bottom: 0;
   }
+
+  .modal {
+    display: none;
+  }
+
+  .modal.is-open {
+    display: block;
+  }
 }
 
 .container {
