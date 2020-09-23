@@ -105,6 +105,13 @@ header {
           letter-spacing: 2px;
           margin-bottom: 1rem;
           text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+
+          &:hover {
+            color: $colorSonic;
+            text-shadow: 0 2px 4px rgba(255, 221, 221, 0.7);
+            transform: scale(1.2);
+            margin-left: 0.6rem;
+          }
         }
       }
     }
@@ -123,6 +130,15 @@ header {
         font-weight: 700;
         box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.7);
         cursor: pointer;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          transform: translateY(-1px);
+        }
+
+        &:active {
+          transform: translateY(1px);
+        }
 
         &__signIn {
           background-color: $colorSonic;
