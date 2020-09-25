@@ -19,7 +19,6 @@
             alt="Sonic Fans Logo"
           />
         </h1>
-        <div class="container">
           <nav class="main-nav">
             <ul class="main-nav__list">
               <li class="main-nav__list-item">
@@ -55,7 +54,6 @@
             <button class="btn btn__signIn">SIGNUP</button>
             <button class="btn btn__login">LOGIN</button>
           </div>
-        </div>
       </header>
 
       <div class="container">
@@ -120,6 +118,7 @@
             </div>
           </div>
         </div>
+      </div>
 
         <div class="tab-wrapper">
           <div class="grid">
@@ -257,14 +256,14 @@
             </div>
           </div>
         </div>
-      </div>
+     
 
       <!-- SIGNIN FORM -->
       <div class="form-modal-wrapper">
         <a href="javascript:;" class="close-signIn">X</a>
         <div class="form-box">
           <h2 class="form-box__title">SING UP</h2>
-          <form id="form" class="form-box__content" data-parsley-validate>
+          <form id="sign-form" class="form-box__content" data-parsley-validate>
             <div class="form-box__content-group">
               <label for="user-name">Name</label>
               <input
@@ -322,11 +321,11 @@
         <a href="javascript:;" class="close-logIn">X</a>
         <div class="form-box">
           <h2 class="form-box__title">SING UP</h2>
-          <form id="form" class="form-box__content" data-parsley-validate>
+          <form id="login-form" class="form-box__content" data-parsley-validate>
             <div class="form-box__content-group">
               <label for="user-name">Name</label>
               <input
-                id="user-name"
+                id="userlogin-name"
                 type="text"
                 placeholder="Your Name"
                 autocomplete="username"
@@ -337,7 +336,7 @@
             <div class="form-box__content-group">
               <label for="user-password">Password</label>
               <input
-                id="user-password"
+                id="userlogin-password"
                 type="password"
                 placeholder="Password"
                 autocomplete="new-password"

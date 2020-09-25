@@ -9,3 +9,25 @@
   justify-content: space-between;
   align-items: center;
 }
+
+//****** RESPONSIVE BREAKPOINTS *******
+
+@mixin bp($point) {
+  @if $point == atSmall {
+    @media (min-width: 568px) {
+      @content;
+    }
+  } @else if $point == atMedium {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == atLarge {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == atXLarge {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
