@@ -14,19 +14,19 @@
 
 @mixin bp($point) {
   @if $point == atSmall {
-    @media (min-width: 568px) {
+    @media (min-width: 568px - 1) {
       @content;
     }
   } @else if $point == atMedium {
-    @media (min-width: 768px) {
+    @media (min-width: 768px - 1) {
       @content;
     }
   } @else if $point == atLarge {
-    @media (min-width: 992px) {
+    @media (min-width: 992px - 1) {
       @content;
     }
   } @else if $point == atXLarge {
-    @media (min-width: 1200px) {
+    @media (min-width: 1200px - 1) {
       @content;
     }
   }

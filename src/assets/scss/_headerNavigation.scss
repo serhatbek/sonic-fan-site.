@@ -1,6 +1,18 @@
 .header {
   background-color: $colorKnuckles;
+  transform: translateY(-185px) scale(0);
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(1, 0, 0, 2);
+
+  &-extended {
+    transform: translateY(0) scale(1);
+  }
+
   @include bp(atMedium) {
+    transform: translateY(0);
     background-color: transparent;
     width: 100%;
     display: flex;

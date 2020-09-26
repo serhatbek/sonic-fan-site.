@@ -174,3 +174,17 @@ function closeLogInModal() {
   const formModalBox = document.querySelector('.login-modal');
   formModalBox.classList.remove('active');
 }
+
+//**************** HAMBURGER MENU ************************//
+
+const hamburgerOpenBtn = document.querySelector('.hamburger-menu');
+const mainHeader = document.querySelector('.header');
+
+hamburgerOpenBtn.addEventListener('click', () => {
+  extendHeader();
+});
+
+function extendHeader() {
+  hamburgerOpenBtn.classList.toggle('hamburger-menu__closeX');
+  mainHeader.classList.toggle('header-extended');
+}
