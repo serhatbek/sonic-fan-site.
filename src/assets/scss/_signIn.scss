@@ -29,14 +29,30 @@
     }
 
     .form-box {
+      width: 100%;
+      margin: 0 0.8rem;
       position: relative;
       padding: 2rem 0;
       background-color: $colorInfo;
       font-family: inherit;
       color: #fff;
       text-align: center;
-      width: 20%;
       border-radius: 0.8rem;
+
+      @include bp(atSmall) {
+        width: 60%;
+        margin: 0;
+      }
+
+      @include bp(atMedium) {
+        width: 50%;
+        margin: 0;
+      }
+
+      @include bp(atLarge) {
+        width: 30%;
+        margin: 0;
+      }
 
       &__title {
         margin-bottom: 1rem;

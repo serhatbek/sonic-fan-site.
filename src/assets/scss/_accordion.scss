@@ -10,6 +10,11 @@
     margin-top: 30px;
     background-color: $colorSonic;
     text-align: center;
+    font-size: 0.9rem;
+
+    @include bp(atSmall) {
+      font-size: 0.1.1rem;
+    }
   }
 
   &__item {

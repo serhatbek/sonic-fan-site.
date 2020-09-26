@@ -24,14 +24,22 @@ main {
 }
 
 .container {
-  width: 80%;
+  width: 94%;
   margin: 0 auto;
+
+  @include bp(atSmall) {
+    width: 80%;
+  }
 }
 
 .tab-wrapper {
-  width: 80%;
+  width: 96%;
   margin: 0 auto;
   padding-bottom: 100px;
+
+  @include bp(atSmall) {
+    width: 80%;
+  }
 
   .grid {
     @include bp(atXLarge) {
@@ -138,12 +146,16 @@ main {
 
       &.active {
         display: flex;
-        padding: 16px;
+        padding: 10px;
         color: #fff;
         font-weight: 500;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+
+        @include bp(atSmall) {
+          padding: 16px;
+        }
 
         @include bp(atLarge) {
           flex-direction: row;
@@ -162,7 +174,9 @@ main {
       }
 
       & p {
-        padding: 0 16px;
+        @include bp(atSmall) {
+          padding: 0 16px;
+        }
       }
     }
   }

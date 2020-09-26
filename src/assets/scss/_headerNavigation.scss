@@ -1,6 +1,7 @@
-header {
-  display: none;
+.header {
+  background-color: $colorKnuckles;
   @include bp(atMedium) {
+    background-color: transparent;
     width: 100%;
     display: flex;
     align-items: center;
@@ -11,44 +12,53 @@ header {
   }
 
   .site-logo {
-    height: 100%;
-    width: 7%;
-    margin: 0;
+    display: none;
 
-    & img {
-      width: 100%;
+    @include bp(atMedium) {
+      display: block;
       height: 100%;
+      width: 7%;
+      margin: 0;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
   .main-nav {
     &__list {
-      @include flexCenter;
-      background-color: rgba(0, 0, 0, 0.3);
-      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+      padding-top: 40px;
+
+      @include bp(atMedium) {
+        @include flexCenter;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 30px;
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
     }
 
     &__list-item {
       list-style-type: none;
       position: relative;
       transition: all 0.5s ease-out;
-
-      &:hover {
-        background-color: $colorKnuckles;
-      }
     }
 
     &__list-item:first-child.active {
-      border-radius: 30px 0 0 30px;
-      background-color: $colorKnuckles;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 30px;
     }
 
-    &__list-item:first-child:hover {
-      border-radius: 30px 0 0 30px;
-    }
-
-    &__list-item:last-child:hover {
-      border-radius: 0 30px 30px 0;
+    &__list-item:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 30px;
     }
 
     &__list-item-shadow1 {
@@ -56,10 +66,14 @@ header {
       letter-spacing: 6px;
       top: 2px;
       left: 18px;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: bolder;
       color: $colorSonic;
       z-index: -1;
+
+      @include bp(atLarge) {
+        font-size: 2rem;
+      }
     }
 
     &__list-item-shadow2 {
@@ -68,9 +82,13 @@ header {
       left: 20px;
       color: #fff;
       letter-spacing: 6px;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: bolder;
       z-index: -2;
+
+      @include bp(atLarge) {
+        font-size: 2rem;
+      }
     }
 
     &__list-item-link {
@@ -78,23 +96,37 @@ header {
       font-weight: 700;
       padding: 0 0.8rem;
       letter-spacing: 6px;
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: $colorYellow;
       position: relative;
       scroll-behavior: smooth;
+
+      @include bp(atLarge) {
+        font-size: 2rem;
+      }
     }
 
     .js-dropdown-panel {
       display: none;
 
       &.active {
-        padding: 1rem 2.6rem 1rem 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
         position: absolute;
-        display: flex;
-        flex-direction: column;
+        top: 3rem;
+        z-index: 20;
         background-color: $colorInfo;
         border-radius: 0.4rem;
-        top: 3rem;
+        padding: 1rem 2.6rem 1rem 1rem;
+
+        @include bp(atMedium) {
+          display: flex;
+          flex-direction: column;
+          grid-gap: 0;
+        }
       }
 
       a {
@@ -104,9 +136,12 @@ header {
         color: #fff;
         font-weight: 500;
         line-height: 1rem;
-        letter-spacing: 2px;
-        margin-bottom: 1rem;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+
+        @include bp(atMedium) {
+          letter-spacing: 2px;
+          margin-bottom: 1rem;
+        }
 
         &:hover {
           color: $colorSonic;
@@ -119,37 +154,40 @@ header {
   }
 
   .button-wrapper {
-    display: flex;
-    margin-right: 100px;
+    display: none;
+    @include bp(atMedium) {
+      display: flex;
+      margin-right: 100px;
 
-    .btn {
-      font-family: inherit;
-      padding: 0.5rem 1.2rem;
-      border: none;
-      outline: none;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 700;
-      box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.7);
-      cursor: pointer;
-      transition: all 0.2s ease-out;
+      .btn {
+        font-family: inherit;
+        padding: 0.5rem 1.2rem;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        transition: all 0.2s ease-out;
 
-      &:hover {
-        transform: translateY(-1px);
-      }
+        &:hover {
+          transform: translateY(-1px);
+        }
 
-      &:active {
-        transform: translateY(1px);
-      }
+        &:active {
+          transform: translateY(1px);
+        }
 
-      &__signIn {
-        background-color: $colorSonic;
-        border-radius: 2rem 0 0 2rem;
-      }
+        &__signIn {
+          background-color: $colorSonic;
+          border-radius: 2rem 0 0 2rem;
+        }
 
-      &__login {
-        background-color: $colorKnuckles;
-        border-radius: 0 2rem 2rem 0;
+        &__login {
+          background-color: $colorKnuckles;
+          border-radius: 0 2rem 2rem 0;
+        }
       }
     }
   }
