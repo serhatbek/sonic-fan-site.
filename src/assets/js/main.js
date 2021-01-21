@@ -133,22 +133,25 @@ function onClickDocument(e) {
 
 const openSignInBtn = document.querySelector('.btn__signIn');
 const closeSignInModalBtn = document.querySelector('.close-signIn');
+const formModalBox = document.querySelector('.form-modal-wrapper');
 
 openSignInBtn.addEventListener('click', () => {
   openSignInModal();
 });
 
-function openSignInModal() {
-  const formModalBox = document.querySelector('.form-modal-wrapper');
-  formModalBox.classList.add('active');
-}
-
 closeSignInModalBtn.addEventListener('click', () => {
   closeSignInModal();
 });
 
+formModalBox.addEventListener('click', () => {
+  closeSignInModal();
+});
+
+function openSignInModal() {
+  formModalBox.classList.add('active');
+}
+
 function closeSignInModal() {
-  const formModalBox = document.querySelector('.form-modal-wrapper');
   formModalBox.classList.remove('active');
 }
 
@@ -156,6 +159,7 @@ function closeSignInModal() {
 
 const openLogInBtn = document.querySelector('.btn__login');
 const closeLogInModalBtn = document.querySelector('.close-logIn');
+const logInModal = document.querySelector('.login-modal');
 
 openLogInBtn.addEventListener('click', () => {
   openLogInModal();
@@ -165,14 +169,16 @@ closeLogInModalBtn.addEventListener('click', () => {
   closeLogInModal();
 });
 
+logInModal.addEventListener('click', () => {
+  closeLogInModal();
+});
+
 function openLogInModal() {
-  const formModalBox = document.querySelector('.login-modal');
-  formModalBox.classList.add('active');
+  logInModal.classList.add('active');
 }
 
 function closeLogInModal() {
-  const formModalBox = document.querySelector('.login-modal');
-  formModalBox.classList.remove('active');
+  logInModal.classList.remove('active');
 }
 
 //**************** HAMBURGER MENU ************************//

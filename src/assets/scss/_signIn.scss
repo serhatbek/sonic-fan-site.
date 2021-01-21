@@ -57,6 +57,7 @@
       &__title {
         margin-bottom: 1rem;
         font-size: 2rem;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
       }
 
       &__content {
@@ -106,13 +107,6 @@
         }
       }
     }
-  }
-}
-
-.login-modal {
-  display: none;
-
-  &.active {
   }
 }
 
