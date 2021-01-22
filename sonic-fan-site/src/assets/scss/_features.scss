@@ -1,0 +1,107 @@
+.features {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  border-top: 4px solid $colorSonic;
+  background-color: $colorSonic;
+  padding-bottom: 100px;
+
+  &__title {
+    font-size: 1.2rem;
+    letter-spacing: 0.6rem;
+    margin: 2rem 0;
+    text-shadow: 10px 4px 8px rgba(0, 0, 0, 0.7);
+
+    @include bp(atSmall) {
+      font-size: 2rem;
+    }
+
+    @include bp(atMedium) {
+      font-size: 3rem;
+      margin: 2rem;
+    }
+  }
+
+  &__wrapper {
+    box-shadow: 0 16px 24px 4px rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    background-color: $colorInfo;
+    display: grid;
+    grid-gap: 3rem 0;
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+
+    @include bp(atMedium) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__content {
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 24px 4px rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+
+    @include bp(atSmall) {
+      width: 70%;
+    }
+
+    &-title {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      text-shadow: 10px 4px 8px rgba(0, 0, 0, 0.7);
+
+      @include bp(atSmall) {
+        font-size: 1.3rem;
+      }
+
+      @include bp(atMedium) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &-image {
+      width: 90%;
+      height: auto;
+      border: 2px solid $colorBorder;
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    &-btn {
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 0.8rem;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      font-weight: 500;
+      line-height: 1rem;
+      background-color: $colorSonic;
+      border-radius: 0.4rem;
+      box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease-out;
+      font-size: 1rem;
+
+      @include bp(atSmall) {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+      }
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+}
