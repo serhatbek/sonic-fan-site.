@@ -47,7 +47,7 @@ var galleryTop = new Swiper('.gallery-top', {
     swiper: galleryThumbs,
   },
   autoplay: {
-    delay: 2500,
+    delay: 4500,
     disableOnInteraction: false,
   },
 });
@@ -143,10 +143,6 @@ closeSignInModalBtn.addEventListener('click', () => {
   closeSignInModal();
 });
 
-formModalBox.addEventListener('click', () => {
-  closeSignInModal();
-});
-
 function openSignInModal() {
   formModalBox.classList.add('active');
 }
@@ -166,10 +162,6 @@ openLogInBtn.addEventListener('click', () => {
 });
 
 closeLogInModalBtn.addEventListener('click', () => {
-  closeLogInModal();
-});
-
-logInModal.addEventListener('click', () => {
   closeLogInModal();
 });
 

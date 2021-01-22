@@ -7,7 +7,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 55;
+    z-index: 11;
     background-color: rgba($colorSonic, 0.7);
     @include flexCenter;
 
@@ -27,83 +27,81 @@
         color: $colorKnuckles;
       }
     }
+  }
+  .form-box {
+    width: 100%;
+    margin: 0 0.8rem;
+    padding: 2rem 0;
+    background-color: $colorInfo;
+    font-family: inherit;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.8rem;
 
-    .form-box {
-      width: 100%;
-      margin: 0 0.8rem;
-      position: relative;
-      padding: 2rem 0;
-      background-color: $colorInfo;
-      font-family: inherit;
-      color: #fff;
-      text-align: center;
-      border-radius: 0.8rem;
+    @include bp(atSmall) {
+      width: 60%;
+      margin: 0;
+    }
 
-      @include bp(atSmall) {
-        width: 60%;
-        margin: 0;
-      }
+    @include bp(atMedium) {
+      width: 50%;
+      margin: 0;
+    }
 
-      @include bp(atMedium) {
-        width: 50%;
-        margin: 0;
-      }
+    @include bp(atLarge) {
+      width: 30%;
+      margin: 0;
+    }
 
-      @include bp(atLarge) {
-        width: 30%;
-        margin: 0;
-      }
+    &__title {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    }
 
-      &__title {
-        margin-bottom: 1rem;
-        font-size: 2rem;
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-      }
+    &__content {
+      padding: 0 1.8rem;
 
-      &__content {
-        padding: 0 1.8rem;
+      &-group {
+        margin-bottom: 1.8rem;
 
-        &-group {
-          margin-bottom: 1.8rem;
-
-          label {
-            display: block;
-            text-align: left;
-            margin-bottom: 0.4rem;
-            margin-left: 0.2rem;
-          }
-
-          input {
-            font-family: inherit;
-            padding: 0.6rem 0.8rem;
-            border-radius: 0.8rem;
-            border: none;
-            width: 100%;
-            outline: none;
-          }
+        label {
+          display: block;
+          text-align: left;
+          margin-bottom: 0.4rem;
+          margin-left: 0.2rem;
         }
 
-        .btn {
-          cursor: pointer;
+        input {
           font-family: inherit;
-          padding: 0.5rem 1.2rem;
+          padding: 0.6rem 0.8rem;
+          border-radius: 0.8rem;
           border: none;
+          width: 100%;
           outline: none;
-          color: #fff;
-          font-size: 1rem;
-          font-weight: 700;
-          box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.7);
-          background-color: $colorSonic;
-          border-radius: 2rem;
-          transition: all 0.2s ease-out;
+        }
+      }
 
-          &:hover {
-            transform: translateY(-1px);
-          }
+      .btn {
+        cursor: pointer;
+        font-family: inherit;
+        padding: 0.5rem 1.2rem;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.7);
+        background-color: $colorSonic;
+        border-radius: 2rem;
+        transition: all 0.2s ease-out;
 
-          &:active {
-            transform: translateY(1px);
-          }
+        &:hover {
+          transform: translateY(-1px);
+        }
+
+        &:active {
+          transform: translateY(1px);
         }
       }
     }
