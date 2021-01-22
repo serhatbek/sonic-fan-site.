@@ -572,7 +572,7 @@ main .modal.is-open {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 55;
+  z-index: 11;
   background-color: rgba(21, 111, 180, 0.7);
   display: flex;
   justify-content: center;
@@ -597,10 +597,9 @@ main .modal.is-open {
   color: #ff3700;
 }
 
-.form-modal-wrapper.active .form-box {
+.form-modal-wrapper .form-box {
   width: 100%;
   margin: 0 0.8rem;
-  position: relative;
   padding: 2rem 0;
   background-color: #faae21;
   font-family: inherit;
@@ -610,48 +609,48 @@ main .modal.is-open {
 }
 
 @media (min-width: 567px) {
-  .form-modal-wrapper.active .form-box {
+  .form-modal-wrapper .form-box {
     width: 60%;
     margin: 0;
   }
 }
 
 @media (min-width: 767px) {
-  .form-modal-wrapper.active .form-box {
+  .form-modal-wrapper .form-box {
     width: 50%;
     margin: 0;
   }
 }
 
 @media (min-width: 991px) {
-  .form-modal-wrapper.active .form-box {
+  .form-modal-wrapper .form-box {
     width: 30%;
     margin: 0;
   }
 }
 
-.form-modal-wrapper.active .form-box__title {
+.form-modal-wrapper .form-box__title {
   margin-bottom: 1rem;
   font-size: 2rem;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
-.form-modal-wrapper.active .form-box__content {
+.form-modal-wrapper .form-box__content {
   padding: 0 1.8rem;
 }
 
-.form-modal-wrapper.active .form-box__content-group {
+.form-modal-wrapper .form-box__content-group {
   margin-bottom: 1.8rem;
 }
 
-.form-modal-wrapper.active .form-box__content-group label {
+.form-modal-wrapper .form-box__content-group label {
   display: block;
   text-align: left;
   margin-bottom: 0.4rem;
   margin-left: 0.2rem;
 }
 
-.form-modal-wrapper.active .form-box__content-group input {
+.form-modal-wrapper .form-box__content-group input {
   font-family: inherit;
   padding: 0.6rem 0.8rem;
   border-radius: 0.8rem;
@@ -660,7 +659,7 @@ main .modal.is-open {
   outline: none;
 }
 
-.form-modal-wrapper.active .form-box__content .btn {
+.form-modal-wrapper .form-box__content .btn {
   cursor: pointer;
   font-family: inherit;
   padding: 0.5rem 1.2rem;
@@ -675,16 +674,12 @@ main .modal.is-open {
   transition: all 0.2s ease-out;
 }
 
-.form-modal-wrapper.active .form-box__content .btn:hover {
+.form-modal-wrapper .form-box__content .btn:hover {
   transform: translateY(-1px);
 }
 
-.form-modal-wrapper.active .form-box__content .btn:active {
+.form-modal-wrapper .form-box__content .btn:active {
   transform: translateY(1px);
-}
-
-.login-modal {
-  display: none;
 }
 
 input.parsley-success,
