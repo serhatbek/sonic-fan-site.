@@ -353,6 +353,7 @@ main .modal.is-open {
 }
 
 .header .main-nav .js-dropdown-panel.active {
+  box-sizing: border-box;
   left: 50%;
   transform: translateX(-50%);
   display: grid;
@@ -363,7 +364,8 @@ main .modal.is-open {
   z-index: 20;
   background-color: #faae21;
   border-radius: 0.4rem;
-  padding: 1rem 2.6rem 1rem 1rem;
+  padding: 1rem;
+  width: 120%;
 }
 
 @media (min-width: 767px) {
